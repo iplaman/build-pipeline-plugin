@@ -129,7 +129,7 @@
 										<img title="retry" alt="retry" src="${rootURL}/images/16x16/redo.png" />
 									</span>
 								{{else}}
-									<span class="pointer trigger" onclick="buildPipeline.showSpinner({{id}}); buildPipeline.rerunBuild({{id}}, '{{build.extId}}', [{{build.dependencyIds}}])">
+									<span class="pointer trigger" onclick="buildPipeline.showSpinner({{id}}); buildPipeline.triggerBuild({{id}}, '{{upstream.projectName}}', {{upstream.buildNumber}}, '{{project.name}}', [{{build.dependencyIds}}])">
 										<img title="retry" alt="retry" src="${rootURL}/images/16x16/redo.png" />
 									</span>
 								{{/if}}
